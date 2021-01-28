@@ -1,10 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
+import { initiateCheckout } from "../lib/payments.js";
 import products from "../products.json";
 
 export default function Home() {
-  console.log("products", products);
   return (
     <div className={styles.container}>
       <Head>
@@ -24,12 +23,29 @@ export default function Home() {
             const { id, title, price, description, image } = product;
             return (
               <li key={id} className={styles.card}>
-                <a href="#">
-                  <img src={image} alt={title} />
-                  <h3>{title}</h3>
-                  <p>${price}</p>
-                  <p>{description}</p>
-                </a>
+                {/* <a href="#"> */}
+                <img src={image} alt={title} />
+                <h3>{title}</h3>
+                <p>${price}</p>
+                <p>{description}</p>
+                <p>
+                  <button
+                    className={styles.button}
+                    onClick={() => {
+                      initiateCheckout({
+                        lineItems: [
+                          {
+                            price: id,
+                            quantity: 1
+                          }
+                        ]
+                      });
+                    }}
+                  >
+                    Buy now
+                  </button>
+                </p>
+                {/* </a> */}
               </li>
             );
           })}
