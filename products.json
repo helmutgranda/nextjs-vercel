@@ -1,0 +1,23 @@
+[
+  {
+    "id": "price_1IERjd2BwZNufjB7UrpV0UGR",
+    "title": "Space Jelly Tshirt",
+    "description": "This is the best description ever for this shirt",
+    "image": "/images/spacejelly-tshirt.jpg",
+    "price": 20.0
+  },
+  {
+    "id": "price_1IERkn2BwZNufjB7Is90B0hX",
+    "title": "Space Jelly Stickers",
+    "description": "This is the best description ever for this Stickers",
+    "image": "/images/spacejelly-stickers.jpg",
+    "price": 10.0
+  },
+  {
+    "id": "price_1IERlE2BwZNufjB75JyOUdvB",
+    "title": "Space Jelly Combo",
+    "description": "This is the best description ever for this Combo",
+    "image": "/images/spacejelly-combo.jpg",
+    "price": 25.0
+  }
+]
