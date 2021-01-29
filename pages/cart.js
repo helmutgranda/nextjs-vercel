@@ -62,7 +62,7 @@ export default function Cart() {
             type="number"
             name="quantity"
             min={0}
-            defaultvalue={item.quantity}
+            defaultValue={item.quantity}
           />
           <button>Update</button>
         </form>
@@ -71,7 +71,8 @@ export default function Cart() {
     return {
       ...item,
       quantity: <Quantity />,
-      total: item.quantity * item.pricePerUnit,
+      pricePerUnit: item.pricePerItem,
+      total: item.quantity * item.pricePerItem,
       title: product.title
     };
   });

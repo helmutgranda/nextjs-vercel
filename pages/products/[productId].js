@@ -71,7 +71,7 @@ export default function Product({ product }) {
                 });
               }}
             >
-              Buy
+              Add To Cart
             </button>
           </p>
         </div>
